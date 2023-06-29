@@ -1,4 +1,3 @@
-// export let apiKey = "adnasdoasflak1";
-export default "adnasdoasflak1";
-export let apiKey = "adnasdoasflak1";
+export default "anasifusdof8";
+export let apiKey = "anasifusdof8";
 export let abc = "abc";
