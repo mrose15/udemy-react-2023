@@ -56,18 +56,68 @@ const greeting2 = createGreeting("Max", "Sup brah!");
 // user1.greet();
 
 // 24. Arrays and Array methods like Map()
-const hobbies = ["Sports", "Cooking", "Reading"];
-console.log(hobbies[0]);
+// const hobbies = ["Sports", "Cooking", "Reading"];
+// console.log(hobbies[0]);
 
-hobbies.push("Cross stitching");
-console.log(hobbies);
+// hobbies.push("Cross stitching");
+// console.log(hobbies);
 
-const findIndexOfSports = hobbies.findIndex((item) => item === "Sports");
+// const findIndexOfSports = hobbies.findIndex((item) => item === "Sports");
 
-console.log(findIndexOfSports);
+// console.log(findIndexOfSports);
 
-const addExclamation = hobbies.map((item) => `${item}!`);
-console.log(addExclamation);
+// const addExclamation = hobbies.map((item) => `${item}!`);
+// console.log(addExclamation);
 
-const editedHobbies = hobbies.map((item) => ({ text: item }));
-console.log(editedHobbies);
+// const editedHobbies = hobbies.map((item) => ({ text: item }));
+// console.log(editedHobbies);
+
+// 25. destructuring
+// const userNameData = ["Michele", "Cheow"];
+// //const firstName = userNameDate[0];
+// //const lastName = userNameDate[1];
+
+// const [firstName, lastName] = ["Michele", "Cheow"];
+// console.log(firstName);
+// console.log(lastName);
+
+// //have to use field names in Object
+// const { name: userName, age } = {
+//   name: "Max",
+//   age: 34,
+// };
+
+// console.log(userName, age);
+
+//27. The spread operator
+// const hobbies = ["Sports", "Cooking", "Reading"];
+// const newHobbies = ["Sleeping"];
+// const mergedHobbies = [...hobbies, ...newHobbies];
+// console.log(mergedHobbies);
+
+// const user = {
+//   name: "Max",
+//   age: 34,
+// };
+
+// const extendedUser = {
+//   isAdmin: true,
+//   ...user,
+// };
+// console.log(extendedUser);
+
+//28. Control Structures
+//const password = prompt("Enter password");
+if (password === "Hello") {
+  console.log("Hello works");
+} else if (password === "hello") {
+  console.log("hello works");
+} else {
+  console.log("Access not granted");
+}
+
+//for of loop
+const hobbies = ["Sports", "Cooking"];
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
