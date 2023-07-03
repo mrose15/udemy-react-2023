@@ -54,3 +54,20 @@ const greeting2 = createGreeting("Max", "Sup brah!");
 // const user1 = new User("Manuel", 35);
 // console.log(user1);
 // user1.greet();
+
+// 24. Arrays and Array methods like Map()
+const hobbies = ["Sports", "Cooking", "Reading"];
+console.log(hobbies[0]);
+
+hobbies.push("Cross stitching");
+console.log(hobbies);
+
+const findIndexOfSports = hobbies.findIndex((item) => item === "Sports");
+
+console.log(findIndexOfSports);
+
+const addExclamation = hobbies.map((item) => `${item}!`);
+console.log(addExclamation);
+
+const editedHobbies = hobbies.map((item) => ({ text: item }));
+console.log(editedHobbies);
