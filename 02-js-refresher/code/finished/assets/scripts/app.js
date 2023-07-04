@@ -108,16 +108,54 @@ const greeting2 = createGreeting("Max", "Sup brah!");
 
 //28. Control Structures
 //const password = prompt("Enter password");
-if (password === "Hello") {
-  console.log("Hello works");
-} else if (password === "hello") {
-  console.log("hello works");
-} else {
-  console.log("Access not granted");
-}
+// if (password === "Hello") {
+//   console.log("Hello works");
+// } else if (password === "hello") {
+//   console.log("hello works");
+// } else {
+//   console.log("Access not granted");
+// }
 
-//for of loop
+// //for of loop
+// const hobbies = ["Sports", "Cooking"];
+// for (const hobby of hobbies) {
+//   console.log(hobby);
+// }
+
+//30. Using functions as Values
+// function handleTimeout() {
+//   console.log("Timed out!");
+// }
+
+// const handleTimeout2 = () => console.log("Timed out... again!");
+// // leave off () to execute function so that the function does not run right away
+// setTimeout(handleTimeout, 2000);
+// setTimeout(handleTimeout2, 2000);
+// setTimeout(() => {
+//   console.log("More timing out");
+// }, 4000);
+
+// function greeter(greetFn) {
+//   greetFn();
+// }
+
+// greeter(() => console.log("Hi"));
+
+// 31. defining functions inside of functions
+// function init() {
+//   function greet() {
+//     console.log("hi");
+//   }
+
+//   greet();
+// }
+
+// init();
+
+//32. Reference vs. primitive values
+let userMessage1 = "hello!";
+userMessage1 = userMessage1.concat("!!!");
+
 const hobbies = ["Sports", "Cooking"];
-for (const hobby of hobbies) {
-  console.log(hobby);
-}
+hobbies.push("Working");
+console.log(hobbies);
