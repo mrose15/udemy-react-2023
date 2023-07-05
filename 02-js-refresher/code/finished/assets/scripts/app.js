@@ -153,9 +153,8 @@ const greeting2 = createGreeting("Max", "Sup brah!");
 // init();
 
 //32. Reference vs. primitive values
-let userMessage1 = "hello!";
-userMessage1 = userMessage1.concat("!!!");
+//let message = "hello!";
 
-const hobbies = ["Sports", "Cooking"];
-hobbies.push("Working");
+const hobbies = ["Sports", "Cooking"]; //var can't be overwritten but array can be changed, address doesn't change
+hobbies.push("Working"); //mutates original array
 console.log(hobbies);
