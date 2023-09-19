@@ -52,6 +52,7 @@ const ExpenseForm = () => {
   //shared changeHandler function as alternative
   // react will not pass identifier and value on function call so you have to use a wrapper arrow function onChange
   // onChange={(event) => inputChangeHandler('title', event.target.value)}
+  /*
   const inputChangeHandler = (identifier, value) => {
     if (identifier === "title") {
       setEnteredTitle(value);
@@ -61,13 +62,33 @@ const ExpenseForm = () => {
       setEnteredAmount(value);
     }
   };
+  */
+
+  const submitHandler = (e) => {
+    e.preventDefault(); //keeps page from reloading
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date(`${enteredDate}T00:00-0800`),
+    };
+
+    console.log(expenseData);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
+  };
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label htmlFor="title">Title</label>
-          <input id="title" type="text" onChange={titleChangeHandler} />
+          <input
+            id="title"
+            type="text"
+            value={enteredTitle}
+            onChange={titleChangeHandler}
+          />
         </div>
         <div className="new-expense__control">
           <label htmlFor="amount">Amount</label>
@@ -76,6 +97,7 @@ const ExpenseForm = () => {
             type="number"
             min="0.01"
             step="0.01"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -85,7 +107,8 @@ const ExpenseForm = () => {
             id="date"
             type="date"
             min="2019-01-01"
-            max="2022-12-31"
+            max="2023-12-31"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
