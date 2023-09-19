@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   //initialize state with string
   // using multiple states is more common, both approaches are fine
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -72,7 +72,7 @@ const ExpenseForm = () => {
       date: new Date(`${enteredDate}T00:00-0800`),
     };
 
-    console.log(expenseData);
+    props.onSubmitExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
