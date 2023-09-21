@@ -5,8 +5,22 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import "./Expenses.css";
 
+//this component controls the ExpensesFilter component so ExpensesFilter is a controlled component
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState("2020");
+
+  //let filterInfoText = "2019, 2021 & 2022";
+
+  //depends on states that changes
+  /*if (filteredYear === "2019") {
+    filterInfoText = "2020, 2021 & 2022";
+  } else if (filteredYear === "2020") {
+    filterInfoText = "2019, 2021 & 2022";
+  } else if (filteredYear === "2021") {
+    filterInfoText = "2019, 2020 & 2022";
+  } else {
+    filterInfoText = "2020, 2021 & 2021";
+  }*/
 
   const expensesFilterHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
